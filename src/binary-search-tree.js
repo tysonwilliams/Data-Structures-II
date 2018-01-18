@@ -12,17 +12,24 @@ class BinarySearchTree {
   // assigns it to either the left or right subtree,
   // depending on its value
   insert(value) {
-
+  
   }
   // Checks the binary search tree for the input target
   // Can be written recursively or iteratively
   contains(target) {
-
+    if (target === this.value) return true;
+    if (this.left) {
+      if (this.left.contains(target)) return true;
+    }
+    if (this.right) {
+      if (this.right.contains(target)) return true;
+    }
+    return false;
   }
   // Traverses the tree in a depth-first manner, i.e. from top to bottom
   // Applies the given callback to each tree node in the process
   depthFirstForEach(cb) {
-
+  
   }
   // Traverses the tree in a breadth-first manner, i.e. in layers, starting 
   // at the root node, going down to the root node's children, and iterating
@@ -31,7 +38,7 @@ class BinarySearchTree {
   // You'll need the queue-helper file for this. Or could you roll your own queue
   // again. Whatever floats your boat.
   breadthFirstForEach(cb) {
-
+  
   }
 }
 
